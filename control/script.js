@@ -18,6 +18,7 @@ window.addEventListener("load", () =>{
           loader.classList.add("loader-hidden");
           
           video.style.opacity = 0;
+          loader.style.position = "fixed";
           loader.addEventListener("transitioned", () =>{
           document.body.removeChild("loader");
       });

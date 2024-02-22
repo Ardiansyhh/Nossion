@@ -73,6 +73,7 @@ background: linear-gradient(0deg, rgba(108,93,210,1) 20%, rgba(108,93,210,1) 50%
     opacity: 1;
     height: 0;
     visibility: hidden;
+    position: fixed;
 }
 
 .vector-line{
