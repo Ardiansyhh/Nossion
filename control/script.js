@@ -2,31 +2,35 @@ window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 }
 
-
+ const page = document.querySelector("html");
 
 window.addEventListener("load", () =>{
     
     let video = document.getElementById("video");
-
+   
     setTimeout(function(){
       video.play();
     }, 100);
-
+  
     const loader = document.querySelector(".loader");
 
     setTimeout(function() {
           loader.classList.add("loader-hidden");
-          
+
+        
+
           video.style.opacity = 0;
           loader.style.position = "fixed";
+       
           loader.addEventListener("transitioned", () =>{
           document.body.removeChild("loader");
+       
       });
 
   
     }, 4800)
-})
 
+})
 
 
 window.onscroll = function() {myFunction() 
