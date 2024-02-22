@@ -1020,6 +1020,11 @@ footer .menu{
         top: 80px; /* Sesuaikan jarak menu dropdown dari atas */
         margin-right: 5%; /* Sesuaikan jarak dari sisi kanan */
     }
+
+    .view-count{
+        content: '2894';
+        width: 1000%;
+    }
 }
 
 @media only screen and (max-width: 576px) {
