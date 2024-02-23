@@ -16,9 +16,6 @@ window.addEventListener("load", () =>{
 
     setTimeout(function() {
           loader.classList.add("loader-hidden");
-
-        
-
           video.style.opacity = 0;
           loader.style.position = "fixed";
        
@@ -26,12 +23,36 @@ window.addEventListener("load", () =>{
           document.body.removeChild("loader");
        
       });
-
   
-    }, 4800)
-
+    }, 4999)
 })
 
+function disableScroll() {
+  // Disable scrolling when the user scrolls with the mousewheel or trackpad
+  window.addEventListener('scroll', preventDefaultScroll, { passive: false });
+  
+  // Disable scrolling when the user tries to scroll by touching the screen
+  window.addEventListener('touchmove', preventDefaultScroll, { passive: false });
+}
+
+// Function to prevent default scrolling behavior
+function preventDefaultScroll(e) {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+}
+
+// Function to enable scrolling
+function enableScroll() {
+  // Remove event listeners that prevent scrolling
+  window.removeEventListener('scroll', preventDefaultScroll);
+  window.removeEventListener('touchmove', preventDefaultScroll);
+}
+
+// Example of enabling scrolling after 2 seconds
+setTimeout(enableScroll, 4800); // Enable scrolling after 2 seconds
+
+// Disable scrolling initially
+disableScroll();
 
 window.onscroll = function() {myFunction() 
 

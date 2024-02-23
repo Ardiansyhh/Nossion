@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disable Scroll Example</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+    
+    }
+    .content {
+        height: 2000px; /* Just for demonstration */
+        background-color: lightblue;
+    }
+</style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Scroll Disabled</h1>
+    <p>This is a long content that will not allow scrolling.</p>
+</div>
+
+<script>
+// Function to disable scrolling
+function disableScroll() {
+    // Disable scrolling when the user scrolls with the mousewheel or trackpad
+    window.addEventListener('scroll', preventDefaultScroll, { passive: false });
+    
+    // Disable scrolling when the user tries to scroll by touching the screen
+    window.addEventListener('touchmove', preventDefaultScroll, { passive: false });
+}
+
+// Function to prevent default scrolling behavior
+function preventDefaultScroll(e) {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+}
+
+// Function to enable scrolling
+function enableScroll() {
+    // Remove event listeners that prevent scrolling
+    window.removeEventListener('scroll', preventDefaultScroll);
+    window.removeEventListener('touchmove', preventDefaultScroll);
+}
+
+// Example of enabling scrolling after 2 seconds
+setTimeout(enableScroll, 2000); // Enable scrolling after 2 seconds
+
+// Disable scrolling initially
+disableScroll();
+</script>
+
+</body>
+</html>
