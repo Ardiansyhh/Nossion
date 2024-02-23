@@ -50,18 +50,18 @@
 
     <main class="landpage">
         <div class="container">
-            <img src="assets/img/content/vector-line.svg" alt="" class="vector-line icon-nondrag">
+            <img src="assets/img/content/vector-line.svg" alt="" class="vector-line icon-nondrag relax"  data-rellax-speed="1" data-rellax-zindex="-1">
             <div class="left-side-wrap">
                 <div class="left-side-items">
                     <div class="left-item1">
-                        <h1 class="title-land">Nossion:&nbsp;there is no room for depression.</h1>
-                        <p>An advanced mental health app that brings cutting-edge technology to the forefront of wellness management. Accessing wide range of tools and resources designed to improve mental health and overallwell-being.</p>
+                        <h1 class="title-land relax" data-rellax-speed="1">Nossion:&nbsp;there is no room for depression.</h1>
+                        <p class="relax"  data-rellax-speed="1">An advanced mental health app that brings cutting-edge technology to the forefront of wellness management. Accessing wide range of tools and resources designed to improve mental health and overallwell-being.</p>
                         <div class="download">
-                            <img src="assets/img/content/play-store.png" alt="play-store" class="icon-nondrag">
-                            <img src="assets/img/content/app-store.png" alt="app-store" class="icon-nondrag">
+                            <img src="assets/img/content/play-store.png" alt="play-store" class="icon-nondrag relax" data-rellax-speed="1">
+                            <img src="assets/img/content/app-store.png" alt="app-store" class="icon-nondrag relax" data-rellax-speed="1.2">
                         </div>
                     </div>
-                    <div class="left-item2">
+                    <div class="left-item2 relax"  data-rellax-speed="1">
                         <div class="qoute">
                             <div class="qoute-cont">
                                 <div class="circle-qoute">
@@ -77,7 +77,7 @@
             <div class="right-side-wrap">
                 <div class="right-cont">
                     <img src="assets/img/content/mockup.svg" alt="Nossion App" class="mockup">
-                    <div class="gradient-back"></div>
+                    <div class="gradient-back relax"  data-rellax-speed=".7"></div>
                 </div>
             </div>
         </div>
@@ -254,5 +254,9 @@
             once: true
         });
       </script>
+    <script src="control/node_modules/rellax/rellax.min.js"></script>
+    <script>
+        const relax = new Rellax('.relax');
+    </script>
 </body>
 </html>

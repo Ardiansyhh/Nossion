@@ -10,6 +10,13 @@
     font-family: sen;
 }
 
+html{
+    scroll-behavior: smooth;
+    transition: 2s;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .highlight-word{   
     display: inline;
     padding: 0 2px;
@@ -44,6 +51,27 @@
     opacity: 1;
     height: 0;
     visibility: hidden;
+}
+
+.go-top{
+    width: 50px;
+    height: 50px;
+    background-color: #6C5DD2;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10%;
+    left: 2%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.go-top span{
+    transform: scale(1.6);
+    color: #fafafa;
 }
 
 .vector-line{
@@ -1140,6 +1168,15 @@ footer .menu{
 
     .short{display: block;}
     .long{display: none;}
+
+    .go-top{
+        width: 40px;
+        height: 40px;
+    }
+
+    .go-top span{
+        transform: scale(1.3);
+    }
 
     .charts{
         flex-direction: column;

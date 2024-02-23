@@ -53,9 +53,18 @@
     </nav>
 
     <div class="hero-information">
-        <h1><span style="font-weight: bold;">Mental health</span>, or emotional and psychological well-being, pertains to an individual's emotional, psychological, 
+        <h1 class="relax" data-rellax-speed="1.5"><span style="font-weight: bold;">Mental health</span>, or emotional and psychological well-being, pertains to an individual's emotional, psychological, 
             and psychic states.</h1>
     </div>
+
+    <div class="go-top" onclick="scrollTop()">
+        <a href="#top">
+        <span class="material-symbols-outlined">
+            expand_less
+            </span>
+        </a>
+    </div>
+
 
     <div class="mental-type-cont">
         <div class="mental-type-wrap">
@@ -383,6 +392,10 @@
         AOS.init({
             once: true
         });
+      </script>
+      <script src="control/node_modules/rellax/rellax.min.js"></script>
+      <script>
+          const relax = new Rellax('.relax');
       </script>
     <script>
         var acc = document.getElementsByClassName("accordion");
